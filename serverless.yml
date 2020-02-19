@@ -1,0 +1,12 @@
+service: expressAPI-epsagon
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: eu-central-1
+functions:
+  server:
+    handler: index.server
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'

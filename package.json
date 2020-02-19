@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/crsschwalm/portfolio-api/issues"
   },
-  "homepage": "https://github.com/crsschwalm/portfolio-api#readme"
+  "homepage": "https://github.com/crsschwalm/portfolio-api#readme",
+  "dependencies": {
+    "babel-node": "0.0.1-security",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "serverless-http": "^2.3.1"
+  }
 }
