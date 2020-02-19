@@ -1,12 +1,23 @@
-service: expressAPI-epsagon
+service: aws-node-rest-api
+
+frameworkVersion: '>=1.1.0 <2.0.0'
+
+# custom:
+#   babelPresets:
+#     - latest
+
+# plugins:
+#   - serverless-babel-plugin
+
 provider:
   name: aws
   runtime: nodejs12.x
-  stage: dev
-  region: us-east-2
+
 functions:
-  server:
-    handler: index.server
+  user:
+    handler: api.handler
     events:
-      - http: ANY /
-      - http: 'ANY {proxy+}'
+      - http:
+          path: github
+          method: get
+          cors: true

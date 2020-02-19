@@ -1,18 +1,17 @@
 {
   "name": "portfolio-api",
   "version": "1.0.0",
-  "description": "AWS + Express API for my portfolio client-side app",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest"
-  },
+  "description": "AWS + HTTP API for my portfolio client-side app",
+  "main": "api.js",
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/crsschwalm/portfolio-api.git"
   },
   "keywords": [
     "AWS",
-    "Express"
+    "Rest",
+    "HTTP"
   ],
   "author": "crsschwalm@gmail.com",
   "license": "ISC",
@@ -21,9 +20,8 @@
   },
   "homepage": "https://github.com/crsschwalm/portfolio-api#readme",
   "dependencies": {
-    "babel-node": "0.0.1-security",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "serverless-http": "^2.3.1"
+    "babel-cli": "~6.18.0",
+    "babel-preset-latest": "^6.16.0",
+    "serverless-babel-plugin": "^0.1.3"
   }
 }
