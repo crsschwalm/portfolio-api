@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-api",
+  "version": "1.0.0",
+  "description": "AWS + Express API for my portfolio client-side app",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crsschwalm/portfolio-api.git"
+  },
+  "keywords": [
+    "AWS",
+    "Express"
+  ],
+  "author": "crsschwalm@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crsschwalm/portfolio-api/issues"
+  },
+  "homepage": "https://github.com/crsschwalm/portfolio-api#readme"
+}
