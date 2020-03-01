@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "AWS + HTTP API for my portfolio client-side app",
   "main": "api.js",
-  "scripts": {},
+  "scripts": {
+    "dev": "serverless deploy --stage dev",
+    "build": "serverless deploy --stage prod"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/crsschwalm/portfolio-api.git"
@@ -24,7 +27,10 @@
     "@types/node": "^7.0.5"
   },
   "dependencies": {
+    "@octokit/graphql": "^4.3.1",
     "express": "^4.17.1",
-    "serverless-http": "^2.3.2"
+    "moment": "^2.24.0",
+    "serverless-http": "^2.3.2",
+    "serverless-secrets-plugin": "^0.0.1"
   }
 }

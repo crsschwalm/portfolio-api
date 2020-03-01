@@ -1,10 +1,23 @@
 service: sample-app
+
+frameworkVersion: '>=1.2.0 <2.0.0'
+
+package:
+  exclude:
+      - secrets.dev.yml
+      - secrets.prod.yml
+
+plugins:
+  - serverless-secrets-plugin
+  
 provider:
   name: aws
   runtime: nodejs12.x
-  stage: dev
-  region: us-east-1
-  memorySize: 128
+  environment:
+      GITHUB_TOKEN: ${self:custom.secrets.GITHUB_TOKEN}
+
+custom:
+  secrets: ${file(secrets.${opt:stage, self:provider.stage}.yml)}
 
 functions:
   app:
