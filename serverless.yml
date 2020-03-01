@@ -1,23 +1,20 @@
-service: aws-node-rest-api
-
-frameworkVersion: '>=1.1.0 <2.0.0'
-
-# custom:
-#   babelPresets:
-#     - latest
-
-# plugins:
-#   - serverless-babel-plugin
-
+service: sample-app
 provider:
   name: aws
   runtime: nodejs12.x
+  stage: dev
+  region: us-east-1
+  memorySize: 128
 
 functions:
-  user:
-    handler: api.handler
-    events:
-      - http:
-          path: github
-          method: get
+  app:
+    handler: app/app.handler
+    events: 
+      - http: 
+          path: /
+          method: ANY
+          cors: true
+      - http: 
+          path: /{proxy+}
+          method: ANY
           cors: true
